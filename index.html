@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +8,26 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
 </head>
 <body>
 
-<div class="container">
-  <h2>Kata Dasar</h2>
-  <p>Isikan Kata dasar yang dapat diterima oleh anak usia 5 sampai 12 tahun</p>
-  <form role="form">
-    <div class="form-group">
-      <label for="usr">Kata dasar :</label>
-      <input type="text" class="form-control" id="usr">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Suku Kata:</label>
-      <input type="password" class="form-control" id="pwd">
-    </div>
-  </form>
+<div class = "container">
+   <div class="wrapper">
+      <form action="" method="post" name="Login_Form" class="form-signin">       
+          <h3 class="form-signin-heading">Masukan Kata</h3>
+          <p>Masukan Kata dasar yang bisa dimengerti anak usia 5 sampai 12 tahun beserta pemenggalan suku katanya ( contoh : jalan -> ja-lan )</p>
+           <hr class="colorgraph"><br>
+           
+           <input type="text" class="form-control" name="Kata" placeholder="Kata Dasar" required="" autofocus="" />
+           <input type="password" class="form-control" name="suku_kata" placeholder="Suku kata" required=""/>            
+          
+           <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Submit</button>         
+      </form>        
+   </div>
 </div>
-
 </body>
 </html>
+
+
