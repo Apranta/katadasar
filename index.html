@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +8,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<!-- All the files that are required -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+   <!-- All the files that are required -->
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
-<body>
+<body ng-controller='InputCtrl'>
    <div class="container">
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
@@ -28,12 +26,12 @@
                <form accept-charset="UTF-8" role="form">
                     <fieldset>
                   <div class="form-group">
-                      <input class="form-control" placeholder="Kata Dasar" name="kata_dasar" type="text">
+                      <input class="form-control" placeholder="Kata Dasar" ng-model="kata_dasar" type="text">
                   </div>
                   <div class="form-group">
-                     <input class="form-control" placeholder="Suku Kata ( contoh : jalan -> ja-lan)" name="text" type="text" value="">
+                     <input class="form-control" placeholder="Suku Kata ( contoh : jalan -> ja-lan)" ng-model="suku_kata" type="text" value="">
                   </div>   
-                  <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+                  <input class="btn btn-lg btn-success btn-block" type="submit" value="submit" ng-click="submit()">
                </fieldset>
                   </form>
              </div>

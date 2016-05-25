@@ -31,31 +31,19 @@ $action = $_GET['action'];
 				case 'kirim':
 					$postdata = file_get_contents("php://input");
 					$request = json_decode($postdata);
-					$isu = $request->permasalahan;
-					$kategori = $request->kategori;
+					$kata = $request->kata_dasar;
+					$suku_kata = $request->suku_kata;
 
-					$con = mysql_connect("cicak.cicak.di.dinding.lo","db_bem","frKuM8H0") or die(mysql_error());
-					mysql_select_db('db_bem2',$con);
+					$con = mysql_connect("ap-cdbr-azure-southeast-b.cloudapp.net","b45b328da2be2a","b829be01") or die(mysql_error());
+					mysql_select_db('acsm_a2561e6f848ef10',$con);
 
 					if ($isu=='') {
 						echo "gagal";
 					}
 					else{
-					$qry_em = 'INSERT INTO aspirasi_isu (id,permasalahan,suka,time,kategori) VALUES ("","'.$isu.'","","","'.$kategori.'")';
+					$qry_em = 'INSERT INTO tb_katadasar (id,kata,suku_kata) VALUES ("","'.$kata.'","","","'.$suku_kata.'")';
 					$qry_res = mysql_query($qry_em);
 					}
-					break;
-				case 'get':
-					$connection = mysqli_connect("localhost:8080", "root", "", "kata_dasar");
-					$query = mysqli_query($connection, "SELECT * FROM tb_katadasar");
-					$data = array();
-
-					if (mysqli_num_rows($query) > 0) {
-						while ($row = mysqli_fetch_array($query)) {
-							$data []= $row;
-						}
-					} 
-					echo json_encode($data);
 					break;
 				default:
 				break;
