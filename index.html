@@ -1,18 +1,29 @@
-<html>
-   
-   <head>
-      <title>AngularJS First Application</title>
-   </head>
-   
-   <body>
-      <h1>Sample Application</h1>
-      
-      <div ng-app = "">
-         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
-         <p>Hello <span ng-bind = "name"></span>!</p>
-      </div>
-      
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-      
-   </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kata Dasar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Kata Dasar</h2>
+  <p>Isikan Kata dasar yang dapat diterima oleh anak usia 5 sampai 12 tahun</p>
+  <form role="form">
+    <div class="form-group">
+      <label for="usr">Kata dasar :</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Suku Kata:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+  </form>
+</div>
+
+</body>
 </html>
